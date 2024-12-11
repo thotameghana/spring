@@ -1,0 +1,11 @@
+package com.IOC.classes;
+
+import com.IOC.interfaces.Trainer;
+
+public class Launch {
+	public static void main(String[] args) {
+		Trainer jt=new JavaTrainer();
+		Trainer st=new SQLTrainer();
+		Trainer wt=new WebTrainer();
+	}
+}

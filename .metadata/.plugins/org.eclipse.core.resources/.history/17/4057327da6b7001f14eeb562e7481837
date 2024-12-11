@@ -1,0 +1,7 @@
+package com.IOC.classes;
+
+import com.IOC.interfaces.Trainer;
+
+public class JavaTrainer implements Trainer {
+
+}
