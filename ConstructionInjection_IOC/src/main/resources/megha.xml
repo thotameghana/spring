@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <bean id="gc" class="com.megha.classes.GoldCustomer">
+    	<constructor-arg name="name" value="virat"></constructor-arg>
+    	<constructor-arg name="type" value="Gold Customer"></constructor-arg>
+    	<constructor-arg name="bgl" ref="bgl"></constructor-arg>
+    </bean>
+    <bean id="pc" class="com.megha.classes.PlatinumCustomer">
+    	<constructor-arg name="name" value="Hardhik"></constructor-arg>
+    	<constructor-arg name="type" value="Platinum Customer"></constructor-arg>
+    	<constructor-arg name="hyd" ref="hyd"></constructor-arg>
+    </bean>
+    
+    <bean id="bgl" class="com.megha.address.Address">
+    	<constructor-arg name="city" value="Banglore"></constructor-arg>
+    	<constructor-arg name="state" value="Karnataka"></constructor-arg>
+    </bean>
+    <bean id="hyd" class="com.megha.address.Address">
+    	<constructor-arg name="city" value="Hyderabad"></constructor-arg>
+    	<constructor-arg name="state" value="Telangana"></constructor-arg>
+    </bean>
+
+</beans>

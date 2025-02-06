@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+	<bean id="jt" class="com.IOC.classes.JavaTrainer">
+		<property name="name" value="Kshitij"></property>
+		<property name="message" value="Keep coding and smiling"></property>
+		<property name="jpt" ref="jpt"></property>
+	</bean>
+	<bean id="st" class="com.IOC.classes.SQLTrainer">
+		<property name="name" value="Somanna"></property>
+		<property name="message" value="Practice complex queries"></property>
+		<property name="spt" ref="spt"></property>
+	</bean>
+	<bean id="wt" class="com.IOC.classes.WebTrainer">
+		<property name="name" value="Rohith"></property>
+		<property name="message" value="Build web applications"></property>
+		<property name="wpt" ref="wpt"></property>
+	</bean>
+	<bean id="jpt" class="com.IOC.PracticeTime.JavaPracticeTime">
+		<property name="time" value="2 hours"></property>
+	</bean>
+	<bean id="spt" class="com.IOC.PracticeTime.SQLPracticeTime">
+		<property name="time" value="2 hours"></property>
+	</bean>
+	<bean id="wpt" class="com.IOC.PracticeTime.WebPracticeTime">
+		<property name="time" value="2 hours"></property>
+	</bean>
+</beans>

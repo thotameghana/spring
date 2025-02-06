@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <bean id="jt" class="com.megha.classes.JavaTrainer">
+    	<constructor-arg name="name" value="Kshitij"></constructor-arg>
+    	<constructor-arg name="message" value="Keep coding and smiling"></constructor-arg>
+    	<constructor-arg name="jpt" ref="jpt"></constructor-arg>
+    </bean>
+    <bean id="st" class="com.megha.classes.SQLTrainer">
+    	<constructor-arg name="name" value="Somanna"></constructor-arg>
+    	<constructor-arg name="message" value="Practice complex queries"></constructor-arg>
+    	<constructor-arg name="spt" ref="spt"></constructor-arg>
+    </bean>
+    <bean id="wt" class="com.megha.classes.WebTrainer">
+    	<constructor-arg name="name" value="Rohith"></constructor-arg>
+    	<constructor-arg name="message" value="build web application's"></constructor-arg>
+    	<constructor-arg name="wpt" ref="wpt"></constructor-arg>
+    </bean>
+    
+    <bean id="jpt" class="com.megha.practiceTime.JavaPracticeTime">
+    	<constructor-arg name="time" value="2 hours"></constructor-arg>
+    </bean>
+    <bean id="spt" class="com.megha.practiceTime.SQLPracticeTime">
+    	<constructor-arg name="time" value="1.5 hours"></constructor-arg>
+    </bean>
+    <bean id="wpt" class="com.megha.practiceTime.WebPracticeTime">
+    	<constructor-arg name="time" value="1.5 hours"></constructor-arg>
+    </bean>
+    
+    
+    
+
+</beans>
